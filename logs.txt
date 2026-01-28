@@ -1,0 +1,388 @@
+“1. ls copy.txt:”
+copy.txt
+“2. mkdir randomdir:”
+3. touch destroyable:
+4. rm destroyable:
+5. touch copy3
+5. cp copy3 copy2 cp copy3 copy2
+6. tar cf file tarstore tarfile.txt:
+7. ping
+7. ping 18.117.77.35 ping 18.117.77.35
+7. ping 18.117.77.35
+PING 18.117.77.35 (18.117.77.35) 56(84) bytes of data.
+
+--- 18.117.77.35 ping statistics ---
+45 packets transmitted, 0 received, 100% packet loss, time 45793ms
+
+2. mkdir randomdir:
+2. mkdir randomdir:
+8. host 18.117.77.35
+35.77.117.18.in-addr.arpa domain name pointer ec2-18-117-77-35.us-east-2.compute.amazonaws.com.
+5. cp copy3 copy2
+9. dig
+
+; <<>> DiG 9.18.33 <<>>
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 64060
+;; flags: qr rd ra; QUERY: 1, ANSWER: 13, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;.				IN	NS
+
+;; ANSWER SECTION:
+.			86398	IN	NS	f.root-servers.net.
+.			86398	IN	NS	h.root-servers.net.
+.			86398	IN	NS	i.root-servers.net.
+.			86398	IN	NS	g.root-servers.net.
+.			86398	IN	NS	c.root-servers.net.
+.			86398	IN	NS	l.root-servers.net.
+.			86398	IN	NS	b.root-servers.net.
+.			86398	IN	NS	k.root-servers.net.
+.			86398	IN	NS	m.root-servers.net.
+.			86398	IN	NS	a.root-servers.net.
+.			86398	IN	NS	e.root-servers.net.
+.			86398	IN	NS	d.root-servers.net.
+.			86398	IN	NS	j.root-servers.net.
+
+;; Query time: 0 msec
+;; SERVER: 172.31.0.2#53(172.31.0.2) (UDP)
+;; WHEN: Wed Jan 28 04:16:09 UTC 2026
+;; MSG SIZE  rcvd: 239
+
+10. uname
+Linux
+11. ds
+11. df
+Filesystem       1K-blocks    Used Available Use% Mounted on
+devtmpfs              4096       0      4096   0% /dev
+tmpfs               469420       0    469420   0% /dev/shm
+tmpfs               187768     432    187336   1% /run
+/dev/nvme0n1p1     8310764 1687320   6623444  21% /
+tmpfs               469420       0    469420   0% /tmp
+/dev/nvme0n1p128     10202    1318      8884  13% /boot/efi
+tmpfs                93884       0     93884   0% /run/user/1000
+12. du
+Filesystem       1K-blocks    Used Available Use% Mounted on
+devtmpfs              4096       0      4096   0% /dev
+tmpfs               469420       0    469420   0% /dev/shm
+tmpfs               187768     432    187336   1% /run
+/dev/nvme0n1p1     8310764 1687384   6623380  21% /
+tmpfs               469420       0    469420   0% /tmp
+/dev/nvme0n1p128     10202    1318      8884  13% /boot/efi
+tmpfs                93884       0     93884   0% /run/user/1000
+13. ps
+    PID TTY          TIME CMD
+   2298 pts/0    00:00:00 bash
+  34968 pts/0    00:00:00 ps
+14. top
+[?1h=[?25l[H[2J(B[mtop - 04:21:26 up  5:22,  1 user,  load average: 0.00, 0.00, 0.00(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m  98 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m  97 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  0.0 (B[m[39;49mus,(B[m[39;49m[1m  3.2 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 96.8 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m    916.8 (B[m[39;49mtotal,(B[m[39;49m[1m    328.2 (B[m[39;49mfree,(B[m[39;49m[1m    180.0 (B[m[39;49mused,(B[m[39;49m[1m    408.6 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m      0.0 (B[m[39;49mtotal,(B[m[39;49m[1m      0.0 (B[m[39;49mfree,(B[m[39;49m[1m      0.0 (B[m[39;49mused.(B[m[39;49m[1m    599.1 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                                                                    (B[m[39;49m[K
+(B[m      1 root      20   0  172584  17628  10828 S   0.0   1.9   0:01.80 systemd                                                                                                                                    (B[m[39;49m[K
+(B[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd                                                                                                                                   (B[m[39;49m[K
+(B[m      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp                                                                                                                                     (B[m[39;49m[K
+(B[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp                                                                                                                                 (B[m[39;49m[K
+(B[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq                                                                                                                               (B[m[39;49m[K
+(B[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns                                                                                                                                      (B[m[39;49m[K
+(B[m      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                                                                                                                (B[m[39;49m[K
+(B[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq                                                                                                                               (B[m[39;49m[K
+(B[m     11 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_kthread                                                                                                                          (B[m[39;49m[K
+(B[m     12 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_rude_kthread                                                                                                                     (B[m[39;49m[K
+(B[m     13 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_trace_kthread                                                                                                                    (B[m[39;49m[K
+(B[m     14 root      20   0       0      0      0 S   0.0   0.0   0:00.17 ksoftirqd/0                                                                                                                                (B[m[39;49m[K
+(B[m     15 root      20   0       0      0      0 I   0.0   0.0   0:00.33 rcu_preempt                                                                                                                                (B[m[39;49m[K
+(B[m     16 root      rt   0       0      0      0 S   0.0   0.0   0:00.08 migration/0                                                                                                                                (B[m[39;49m[K
+(B[m     18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                                                                                                    (B[m[39;49m[K
+(B[m     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                                                                                                    (B[m[39;49m[K
+(B[m     20 root      rt   0       0      0      0 S   0.0   0.0   0:00.10 migration/1                                                                                                                                (B[m[39;49m[K
+(B[m     21 root      20   0       0      0      0 S   0.0   0.0   0:00.18 ksoftirqd/1                                                                                                                                (B[m[39;49m[K
+(B[m     23 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                                                                                                                (B[m[39;49m[K
+(B[m     26 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs                                                                                                                                  (B[m[39;49m[K
+(B[m     27 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 inet_frag_wq                                                                                                                               (B[m[39;49m[K
+(B[m     28 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kauditd                                                                                                                                    (B[m[39;49m[K
+(B[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungtaskd                                                                                                                                 (B[m[39;49m[K
+(B[m     30 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                                                                                                                 (B[m[39;49m[K
+(B[m     32 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback                                                                                                                                  (B[m[39;49m[K
+(B[m     33 root      20   0       0      0      0 S   0.0   0.0   0:00.54 kcompactd0                                                                                                                                 (B[m[39;49m[K
+(B[m     35 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                                                                                                                 (B[m[39;49m[K
+(B[m     36 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 cryptd                                                                                                                                     (B[m[39;49m[K
+(B[m     37 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd                                                                                                                                (B[m[39;49m[K
+(B[m     38 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd                                                                                                                                    (B[m[39;49m[K
+(B[m     39 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 blkcg_punt_bio                                                                                                                             (B[m[39;49m[K
+(B[m     40 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 tpm_dev_wq                                                                                                                                 (B[m[39;49m[K
+(B[m     41 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 md                                                                                                                                         (B[m[39;49m[K
+(B[m     42 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 edac-poller                                                                                                                                (B[m[39;49m[K
+(B[m     43 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd                                                                                                                                  (B[m[39;49m[K
+(B[m     44 root       0 -20       0      0      0 I   0.0   0.0   0:00.01 kworker/1:1H-kblockd                                                                                                                       (B[m[39;49m[K
+(B[m     67 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kswapd0                                                                                                                                    (B[m[39;49m[K
+(B[m     70 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfsalloc                                                                                                                                   (B[m[39;49m[K
+(B[m     71 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs_mru_cache                                                                                                                              (B[m[39;49m[K
+(B[m     74 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kthrotld                                                                                                                                   (B[m[39;49m[K
+(B[m    121 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 nvme-wq                                                                                                                                    (B[m[39;49m[K
+(B[m    123 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 nvme-reset-wq                                                                                                                              (B[m[39;49m[K
+(B[m    125 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 nvme-delete-wq                                                                                                                             (B[m[39;49m[K
+(B[m    152 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mld                                                                                                                                        (B[m[39;49m[K
+(B[m    153 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ipv6_addrconf                                                                                                                              (B[m[39;49m[K
+(B[m    154 root       0 -20       0      0      0 I   0.0   0.0   0:00.03 kworker/0:1H-xfs-log/nvme0n1p1                                                                                                             (B[m[39;49m[K
+(B[m    173 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kstrp                                                                                                                                      (B[m[39;49m[K
+(B[m    183 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 zswap-shrink                                                                                                                               (B[m[39;49m[K
+(B[m    184 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/u5:0                                                                                                                               (B[m[39;49m[K
+(B[m    775 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-buf/nvme0n1                                                                                                                            (B[m[39;49m[K
+(B[m    776 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-conv/nvme0n                                                                                                                            (B[m[39;49m[K
+(B[m    777 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-reclaim/nvm                                                                                                                            (B[m[39;49m[K
+(B[m    778 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-blockgc/nvm                                                                                                                            (B[m[39;49m[K
+(B[m    779 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-inodegc/nvm                                                                                                                            (B[m[39;49m[K
+(B[m    780 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-log/nvme0n1                                                                                                                            (B[m[39;49m[K
+(B[m    781 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-cil/nvme0n1                                                                                                                            (B[m[39;49m[K
+(B[m    782 root      20   0       0      0      0 S   0.0   0.0   0:04.58 xfsaild/nvme0n1p1                                                                                                                          (B[m[39;49m[K
+(B[m    829 root      20   0   53544  16436  15284 S   0.0   1.8   0:00.79 systemd-journal                                                                                                                            (B[m[39;49m[K[?25l[H(B[mtop - 04:21:28 up  5:22,  1 user,  load average: 0.00, 0.00, 0.00(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m  98 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m  97 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  0.0 (B[m[39;49mus,(B[m[39;49m[1m  0.2 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 99.8 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m    916.8 (B[m[39;49mtotal,(B[m[39;49m[1m    328.2 (B[m[39;49mfree,(B[m[39;49m[1m    180.0 (B[m[39;49mused,(B[m[39;49m[1m    408.6 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m      0.0 (B[m[39;49mtotal,(B[m[39;49m[1m      0.0 (B[m[39;49mfree,(B[m[39;49m[1m      0.0 (B[m[39;49mused.(B[m[39;49m[1m    599.1 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                                                                    (B[m[39;49m[K
+(B[m      1 root      20   0  172584  17628  10828 S   0.0   1.9   0:01.80 systemd                                                                                                                                    (B[m[39;49m[K
+(B[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd                                                                                                                                   (B[m[39;49m[K
+(B[m      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp                                                                                                                                     (B[m[39;49m[K
+(B[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp                                                                                                                                 (B[m[39;49m[K
+(B[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq                                                                                                                               (B[m[39;49m[K
+(B[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns                                                                                                                                      (B[m[39;49m[K
+(B[m      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                                                                                                                (B[m[39;49m[K
+(B[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq                                                                                                                               (B[m[39;49m[K
+(B[m     11 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_kthread                                                                                                                          (B[m[39;49m[K
+(B[m     12 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_rude_kthread                                                                                                                     (B[m[39;49m[K
+(B[m     13 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_trace_kthread                                                                                                                    (B[m[39;49m[K
+(B[m     14 root      20   0       0      0      0 S   0.0   0.0   0:00.17 ksoftirqd/0                                                                                                                                (B[m[39;49m[K
+(B[m     15 root      20   0       0      0      0 I   0.0   0.0   0:00.33 rcu_preempt                                                                                                                                (B[m[39;49m[K
+(B[m     16 root      rt   0       0      0      0 S   0.0   0.0   0:00.08 migration/0                                                                                                                                (B[m[39;49m[K
+(B[m     18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                                                                                                    (B[m[39;49m[K
+(B[m     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                                                                                                    (B[m[39;49m[K
+(B[m     20 root      rt   0       0      0      0 S   0.0   0.0   0:00.10 migration/1                                                                                                                                (B[m[39;49m[K
+(B[m     21 root      20   0       0      0      0 S   0.0   0.0   0:00.18 ksoftirqd/1                                                                                                                                (B[m[39;49m[K
+(B[m     23 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                                                                                                                (B[m[39;49m[K
+(B[m     26 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs                                                                                                                                  (B[m[39;49m[K
+(B[m     27 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 inet_frag_wq                                                                                                                               (B[m[39;49m[K
+(B[m     28 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kauditd                                                                                                                                    (B[m[39;49m[K
+(B[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungtaskd                                                                                                                                 (B[m[39;49m[K
+(B[m     30 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                                                                                                                 (B[m[39;49m[K
+(B[m     32 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback                                                                                                                                  (B[m[39;49m[K
+(B[m     33 root      20   0       0      0      0 S   0.0   0.0   0:00.54 kcompactd0                                                                                                                                 (B[m[39;49m[K
+(B[m     35 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                                                                                                                 (B[m[39;49m[K
+(B[m     36 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 cryptd                                                                                                                                     (B[m[39;49m[K
+(B[m     37 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd                                                                                                                                (B[m[39;49m[K
+(B[m     38 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd                                                                                                                                    (B[m[39;49m[K
+(B[m     39 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 blkcg_punt_bio                                                                                                                             (B[m[39;49m[K
+(B[m     40 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 tpm_dev_wq                                                                                                                                 (B[m[39;49m[K
+(B[m     41 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 md                                                                                                                                         (B[m[39;49m[K
+(B[m     42 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 edac-poller                                                                                                                                (B[m[39;49m[K
+(B[m     43 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd                                                                                                                                  (B[m[39;49m[K
+(B[m     44 root       0 -20       0      0      0 I   0.0   0.0   0:00.01 kworker/1:1H-kblockd                                                                                                                       (B[m[39;49m[K
+(B[m     67 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kswapd0                                                                                                                                    (B[m[39;49m[K
+(B[m     70 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfsalloc                                                                                                                                   (B[m[39;49m[K
+(B[m     71 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs_mru_cache                                                                                                                              (B[m[39;49m[K
+(B[m     74 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kthrotld                                                                                                                                   (B[m[39;49m[K
+(B[m    121 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 nvme-wq                                                                                                                                    (B[m[39;49m[K
+(B[m    123 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 nvme-reset-wq                                                                                                                              (B[m[39;49m[K
+(B[m    125 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 nvme-delete-wq                                                                                                                             (B[m[39;49m[K
+(B[m    152 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mld                                                                                                                                        (B[m[39;49m[K
+(B[m    153 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ipv6_addrconf                                                                                                                              (B[m[39;49m[K
+(B[m    154 root       0 -20       0      0      0 I   0.0   0.0   0:00.03 kworker/0:1H-xfs-log/nvme0n1p1                                                                                                             (B[m[39;49m[K
+(B[m    173 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kstrp                                                                                                                                      (B[m[39;49m[K
+(B[m    183 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 zswap-shrink                                                                                                                               (B[m[39;49m[K
+(B[m    184 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/u5:0                                                                                                                               (B[m[39;49m[K
+(B[m    775 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-buf/nvme0n1                                                                                                                            (B[m[39;49m[K
+(B[m    776 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-conv/nvme0n                                                                                                                            (B[m[39;49m[K
+(B[m    777 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-reclaim/nvm                                                                                                                            (B[m[39;49m[K
+(B[m    778 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-blockgc/nvm                                                                                                                            (B[m[39;49m[K
+(B[m    779 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-inodegc/nvm                                                                                                                            (B[m[39;49m[K
+(B[m    780 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-log/nvme0n1                                                                                                                            (B[m[39;49m[K
+(B[m    781 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-cil/nvme0n1                                                                                                                            (B[m[39;49m[K
+(B[m    782 root      20   0       0      0      0 S   0.0   0.0   0:04.58 xfsaild/nvme0n1p1                                                                                                                          (B[m[39;49m[K
+(B[m    829 root      20   0   53544  16436  15284 S   0.0   1.8   0:00.79 systemd-journal                                                                                                                            (B[m[39;49m[K[H(B[mtop - 04:21:31 up  5:22,  1 user,  load average: 0.00, 0.00, 0.00(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  0.0 (B[m[39;49mus,(B[m[39;49m[1m  0.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m100.0 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+
+
+[K
+
+(B[m[1m  34971 ec2-user  20   0  224020   3336   2728 R   0.3   0.4   0:00.01 top                                                                                                                                        (B[m[39;49m[K
+(B[m      1 root      20   0  172584  17628  10828 S   0.0   1.9   0:01.80 systemd                                                                                                                                    (B[m[39;49m[K
+(B[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd                                                                                                                                   (B[m[39;49m[K
+(B[m      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp                                                                                                                                     (B[m[39;49m[K
+(B[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp                                                                                                                                 (B[m[39;49m[K
+(B[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq                                                                                                                               (B[m[39;49m[K
+(B[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns                                                                                                                                      (B[m[39;49m[K
+(B[m      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                                                                                                                (B[m[39;49m[K
+(B[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq                                                                                                                               (B[m[39;49m[K
+(B[m     11 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_kthread                                                                                                                          (B[m[39;49m[K
+(B[m     12 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_rude_kthread                                                                                                                     (B[m[39;49m[K
+(B[m     13 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_trace_kthread                                                                                                                    (B[m[39;49m[K
+(B[m     14 root      20   0       0      0      0 S   0.0   0.0   0:00.17 ksoftirqd/0                                                                                                                                (B[m[39;49m[K
+(B[m     15 root      20   0       0      0      0 I   0.0   0.0   0:00.33 rcu_preempt                                                                                                                                (B[m[39;49m[K
+(B[m     16 root      rt   0       0      0      0 S   0.0   0.0   0:00.08 migration/0                                                                                                                                (B[m[39;49m[K
+(B[m     18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                                                                                                    (B[m[39;49m[K
+(B[m     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                                                                                                    (B[m[39;49m[K
+(B[m     20 root      rt   0       0      0      0 S   0.0   0.0   0:00.10 migration/1                                                                                                                                (B[m[39;49m[K
+(B[m     21 root      20   0       0      0      0 S   0.0   0.0   0:00.18 ksoftirqd/1                                                                                                                                (B[m[39;49m[K
+(B[m     23 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                                                                                                                (B[m[39;49m[K
+(B[m     26 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs                                                                                                                                  (B[m[39;49m[K
+(B[m     27 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 inet_frag_wq                                                                                                                               (B[m[39;49m[K
+(B[m     28 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kauditd                                                                                                                                    (B[m[39;49m[K
+(B[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungtaskd                                                                                                                                 (B[m[39;49m[K
+(B[m     30 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                                                                                                                 (B[m[39;49m[K
+(B[m     32 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback                                                                                                                                  (B[m[39;49m[K
+(B[m     33 root      20   0       0      0      0 S   0.0   0.0   0:00.54 kcompactd0                                                                                                                                 (B[m[39;49m[K
+(B[m     35 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                                                                                                                 (B[m[39;49m[K
+(B[m     36 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 cryptd                                                                                                                                     (B[m[39;49m[K
+(B[m     37 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd                                                                                                                                (B[m[39;49m[K
+(B[m     38 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd                                                                                                                                    (B[m[39;49m[K
+(B[m     39 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 blkcg_punt_bio                                                                                                                             (B[m[39;49m[K
+(B[m     40 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 tpm_dev_wq                                                                                                                                 (B[m[39;49m[K
+(B[m     41 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 md                                                                                                                                         (B[m[39;49m[K
+(B[m     42 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 edac-poller                                                                                                                                (B[m[39;49m[K
+(B[m     43 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd                                                                                                                                  (B[m[39;49m[K
+(B[m     44 root       0 -20       0      0      0 I   0.0   0.0   0:00.01 kworker/1:1H-kblockd                                                                                                                       (B[m[39;49m[K
+(B[m     67 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kswapd0                                                                                                                                    (B[m[39;49m[K
+(B[m     70 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfsalloc                                                                                                                                   (B[m[39;49m[K
+(B[m     71 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs_mru_cache                                                                                                                              (B[m[39;49m[K
+(B[m     74 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kthrotld                                                                                                                                   (B[m[39;49m[K
+(B[m    121 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 nvme-wq                                                                                                                                    (B[m[39;49m[K
+(B[m    123 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 nvme-reset-wq                                                                                                                              (B[m[39;49m[K
+(B[m    125 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 nvme-delete-wq                                                                                                                             (B[m[39;49m[K
+(B[m    152 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mld                                                                                                                                        (B[m[39;49m[K
+(B[m    153 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ipv6_addrconf                                                                                                                              (B[m[39;49m[K
+(B[m    154 root       0 -20       0      0      0 I   0.0   0.0   0:00.03 kworker/0:1H-xfs-log/nvme0n1p1                                                                                                             (B[m[39;49m[K
+(B[m    173 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kstrp                                                                                                                                      (B[m[39;49m[K
+(B[m    183 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 zswap-shrink                                                                                                                               (B[m[39;49m[K
+(B[m    184 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/u5:0                                                                                                                               (B[m[39;49m[K
+(B[m    775 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-buf/nvme0n1                                                                                                                            (B[m[39;49m[K
+(B[m    776 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-conv/nvme0n                                                                                                                            (B[m[39;49m[K
+(B[m    777 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-reclaim/nvm                                                                                                                            (B[m[39;49m[K
+(B[m    778 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-blockgc/nvm                                                                                                                            (B[m[39;49m[K
+(B[m    779 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-inodegc/nvm                                                                                                                            (B[m[39;49m[K
+(B[m    780 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-log/nvme0n1                                                                                                                            (B[m[39;49m[K
+(B[m    781 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-cil/nvme0n1                                                                                                                            (B[m[39;49m[K
+(B[m    782 root      20   0       0      0      0 S   0.0   0.0   0:04.58 xfsaild/nvme0n1p1                                                                                                                          (B[m[39;49m[K[?25l[H(B[mtop - 04:21:33 up  5:22,  1 user,  load average: 0.00, 0.00, 0.00(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m  98 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m  97 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  0.0 (B[m[39;49mus,(B[m[39;49m[1m  0.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m100.0 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m    916.8 (B[m[39;49mtotal,(B[m[39;49m[1m    328.2 (B[m[39;49mfree,(B[m[39;49m[1m    180.0 (B[m[39;49mused,(B[m[39;49m[1m    408.6 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m      0.0 (B[m[39;49mtotal,(B[m[39;49m[1m      0.0 (B[m[39;49mfree,(B[m[39;49m[1m      0.0 (B[m[39;49mused.(B[m[39;49m[1m    599.1 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                                                                    (B[m[39;49m[K
+(B[m      1 root      20   0  172584  17628  10828 S   0.0   1.9   0:01.80 systemd                                                                                                                                    (B[m[39;49m[K
+(B[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd                                                                                                                                   (B[m[39;49m[K
+(B[m      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp                                                                                                                                     (B[m[39;49m[K
+(B[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp                                                                                                                                 (B[m[39;49m[K
+(B[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq                                                                                                                               (B[m[39;49m[K
+(B[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns                                                                                                                                      (B[m[39;49m[K
+(B[m      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                                                                                                                (B[m[39;49m[K
+(B[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq                                                                                                                               (B[m[39;49m[K
+(B[m     11 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_kthread                                                                                                                          (B[m[39;49m[K
+(B[m     12 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_rude_kthread                                                                                                                     (B[m[39;49m[K
+(B[m     13 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_trace_kthread                                                                                                                    (B[m[39;49m[K
+(B[m     14 root      20   0       0      0      0 S   0.0   0.0   0:00.17 ksoftirqd/0                                                                                                                                (B[m[39;49m[K
+(B[m     15 root      20   0       0      0      0 I   0.0   0.0   0:00.33 rcu_preempt                                                                                                                                (B[m[39;49m[K
+(B[m     16 root      rt   0       0      0      0 S   0.0   0.0   0:00.08 migration/0                                                                                                                                (B[m[39;49m[K
+(B[m     18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                                                                                                    (B[m[39;49m[K
+(B[m     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                                                                                                    (B[m[39;49m[K
+(B[m     20 root      rt   0       0      0      0 S   0.0   0.0   0:00.10 migration/1                                                                                                                                (B[m[39;49m[K
+(B[m     21 root      20   0       0      0      0 S   0.0   0.0   0:00.18 ksoftirqd/1                                                                                                                                (B[m[39;49m[K
+(B[m     23 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                                                                                                                (B[m[39;49m[K
+(B[m     26 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs                                                                                                                                  (B[m[39;49m[K
+(B[m     27 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 inet_frag_wq                                                                                                                               (B[m[39;49m[K
+(B[m     28 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kauditd                                                                                                                                    (B[m[39;49m[K
+(B[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungtaskd                                                                                                                                 (B[m[39;49m[K
+(B[m     30 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                                                                                                                 (B[m[39;49m[K
+(B[m     32 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback                                                                                                                                  (B[m[39;49m[K
+(B[m     33 root      20   0       0      0      0 S   0.0   0.0   0:00.54 kcompactd0                                                                                                                                 (B[m[39;49m[K
+(B[m     35 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                                                                                                                 (B[m[39;49m[K
+(B[m     36 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 cryptd                                                                                                                                     (B[m[39;49m[K
+(B[m     37 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd                                                                                                                                (B[m[39;49m[K
+(B[m     38 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd                                                                                                                                    (B[m[39;49m[K
+(B[m     39 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 blkcg_punt_bio                                                                                                                             (B[m[39;49m[K
+(B[m     40 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 tpm_dev_wq                                                                                                                                 (B[m[39;49m[K
+(B[m     41 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 md                                                                                                                                         (B[m[39;49m[K
+(B[m     42 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 edac-poller                                                                                                                                (B[m[39;49m[K
+(B[m     43 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd                                                                                                                                  (B[m[39;49m[K
+(B[m     44 root       0 -20       0      0      0 I   0.0   0.0   0:00.01 kworker/1:1H-kblockd                                                                                                                       (B[m[39;49m[K
+(B[m     67 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kswapd0                                                                                                                                    (B[m[39;49m[K
+(B[m     70 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfsalloc                                                                                                                                   (B[m[39;49m[K
+(B[m     71 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs_mru_cache                                                                                                                              (B[m[39;49m[K
+(B[m     74 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kthrotld                                                                                                                                   (B[m[39;49m[K
+(B[m    121 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 nvme-wq                                                                                                                                    (B[m[39;49m[K
+(B[m    123 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 nvme-reset-wq                                                                                                                              (B[m[39;49m[K
+(B[m    125 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 nvme-delete-wq                                                                                                                             (B[m[39;49m[K
+(B[m    152 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mld                                                                                                                                        (B[m[39;49m[K
+(B[m    153 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ipv6_addrconf                                                                                                                              (B[m[39;49m[K
+(B[m    154 root       0 -20       0      0      0 I   0.0   0.0   0:00.03 kworker/0:1H-xfs-log/nvme0n1p1                                                                                                             (B[m[39;49m[K
+(B[m    173 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kstrp                                                                                                                                      (B[m[39;49m[K
+(B[m    183 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 zswap-shrink                                                                                                                               (B[m[39;49m[K
+(B[m    184 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/u5:0                                                                                                                               (B[m[39;49m[K
+(B[m    775 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-buf/nvme0n1                                                                                                                            (B[m[39;49m[K
+(B[m    776 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-conv/nvme0n                                                                                                                            (B[m[39;49m[K
+(B[m    777 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-reclaim/nvm                                                                                                                            (B[m[39;49m[K
+(B[m    778 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-blockgc/nvm                                                                                                                            (B[m[39;49m[K
+(B[m    779 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-inodegc/nvm                                                                                                                            (B[m[39;49m[K
+(B[m    780 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-log/nvme0n1                                                                                                                            (B[m[39;49m[K
+(B[m    781 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 xfs-cil/nvme0n1                                                                                                                            (B[m[39;49m[K
+(B[m    782 root      20   0       0      0      0 S   0.0   0.0   0:04.58 xfsaild/nvme0n1p1                                                                                                                          (B[m[39;49m[K
+(B[m    829 root      20   0   53544  16436  15284 S   0.0   1.8   0:00.79 systemd-journal                                                                                                                            (B[m[39;49m[K[?1l>[66;1H
+[?12l[?25h[K15. head logs.txt
+“1. ls copy.txt:”
+copy.txt
+“2. mkdir randomdir:”
+3. touch destroyable:
+4. rm destroyable:
+5. touch copy3
+5. cp copy3 copy2 cp copy3 copy2
+6. tar cf file tarstore tarfile.txt:
+7. ping
+7. ping 18.117.77.35 ping 18.117.77.35
+16. tail logs.txt
+copy.txt
+“2. mkdir randomdir:”
+3. touch destroyable:
+4. rm destroyable:
+5. touch copy3
+5. cp copy3 copy2 cp copy3 copy2
+6. tar cf file tarstore tarfile.txt:
+7. ping
+7. ping 18.117.77.35 ping 18.117.77.35
+16. tail logs.txt
+17. sudo yum install git
+18. chmod files.tarstore 744
+18. chmod copy3 744
+5. touch copy3.txt
+5. cp copy3.txt copy2.txt cp copy3.txt copy2.txt
+19. pwd pwd
+20. ifconfig
+ens5: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9001
+        inet 172.31.10.50  netmask 255.255.240.0  broadcast 172.31.15.255
+        inet6 fe80::47:7eff:fe04:7065  prefixlen 64  scopeid 0x20<link>
+        ether 02:47:7e:04:70:65  txqueuelen 1000  (Ethernet)
+        RX packets 70192  bytes 70684393 (67.4 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 24102  bytes 3000450 (2.8 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 12  bytes 1020 (1020.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 12  bytes 1020 (1020.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+19. pwd
+/home/ec2-user/assign1logs
+21. wget file:///C:/Users/mathn/OneDrive/Pictures/Dess%20PFP2.jpg
+21. wget -P /Users/mathn/OneDrive/Pictures/ https://DessPFP2.com/file.jpg
